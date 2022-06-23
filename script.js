@@ -1,6 +1,5 @@
  window.addEventListener('load', function () {
      const date = new Date();
-     const day = date.getDate();
      let path = '';
      let month = date.getMonth();
      switch (month + 1) {
@@ -17,10 +16,13 @@
              return month = month;
              break;
      }
-     if (date.getHours() > 0 && date.getHours() <= 12) {
+     if (date.getHours() > 8 && date.getHours() <= 14) {
          path = 'https://bit.ly/kehadiran-sib-' + date.getDate() + '-' + month + '-pagi';
-     } else {
+         return this.window.location.replace(path);
+     } else if (date.getHours() > 14 && date.getHours() < 0) {
          path = 'https://bit.ly/kehadiran-sib-' + date.getDate() + '-' + month + '-sore';
+         return this.window.location.replace(path);
+     } else {
+         document.querySelector('#output').innerHTML = '<h1> Udah malem guys, turuuu😴</h1>';
      }
-     return window.location.replace(path);
  });
