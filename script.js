@@ -22,7 +22,7 @@ window.addEventListener('load', function () {
     if (date.getHours() > 8 && date.getHours() <= 14) {
         path = 'https://bit.ly/kehadiran-sib-' + date.getDate() + '-' + month + '-pagi';
         return this.window.location.replace(path);
-    } else if (date.getHours() > 14 && date.getHours() < 0) {
+    } else if (date.getHours() > 14 && date.getHours() <= 23) {
         path = 'https://bit.ly/kehadiran-sib-' + date.getDate() + '-' + month + '-sore';
         return this.window.location.replace(path);
     } else {
