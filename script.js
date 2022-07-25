@@ -19,13 +19,14 @@ window.addEventListener('load', function () {
             return month = month;
             break;
     }
-    if (date.getHours() > 8 && date.getHours() <= 14) {
-        path = 'https://bit.ly/kehadiran-sib-' + date.getDate() + '-' + month + '-pagi';
-        return this.window.location.replace(path);
-    } else if (date.getHours() > 14 && date.getHours() <= 23) {
-        path = 'https://bit.ly/kehadiran-sib-' + date.getDate() + '-' + month + '-sore';
-        return this.window.location.replace(path);
-    } else {
-        document.querySelector('#output').innerHTML = '<h1> Udah malem guys, turuuu😴</h1>';
-    }
+    //if (date.getHours() > 8 && date.getHours() <= 14) {
+    // path = 'https://bit.ly/kehadiran-sib-' + date.getDate() + '-' + month + '-pagi';    
+    path = 'https://bit.ly/kehadiran-sib-' + date.getDate() + '-' + month;
+    return this.window.location.replace(path);
+    //} else if (date.getHours() > 14 && date.getHours() <= 23) {
+      //  path = 'https://bit.ly/kehadiran-sib-' + date.getDate() + '-' + month + '-sore';
+      //  return this.window.location.replace(path);
+    //} else {
+      //  document.querySelector('#output').innerHTML = '<h1> Udah malem guys, turuuu😴</h1>';
+    //}
 });
